@@ -1,0 +1,125 @@
+.card {
+    background-color: var(--surface-color);
+    width: 20.44rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--stroke-color);
+
+    & h2 {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+    }
+
+    & p {
+        font-size: 1rem;
+    }
+
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-block: 3rem;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+@media (width >=80em) {
+
+    .card {
+        width: 100%;
+        padding-inline: 2rem;
+        padding-block: 2.5rem;
+
+        & h2 {
+            font-size: 2rem;
+        }
+
+        & .desktop-only {
+            position: absolute;
+
+            right: 2rem;
+            bottom: 2rem;
+
+            filter: drop-shadow(1rem 1rem 4rem rgba(0, 0, 0, 0.497));
+
+            max-width: 15.125rem;
+            height: 30.35rem;
+        }
+
+        ;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-rows: 25rem 25rem;
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+            "A B B C"
+            "D D E E"
+        ;
+
+        gap: 2rem;
+
+        margin-inline: auto;
+        margin-block: 5rem;
+    }
+
+    .card-1 {
+        grid-area: A;
+    }
+
+    .card-2 {
+        grid-area: B;
+        position: relative;
+        overflow: hidden;
+
+        &>div {
+            max-width: 16rem;
+        }
+
+
+
+    }
+
+    .card-3 {
+        grid-area: C;
+    }
+
+    .card-4 {
+        grid-area: D;
+
+        position: relative;
+        overflow: hidden;
+
+        justify-items: end;
+
+        &>div {
+            max-width: 16rem;
+        }
+
+        & .desktop-only {
+            left: 2rem;
+            bottom: 2rem;
+        }
+
+        ;
+
+    }
+
+    .card-5 {
+        grid-area: E;
+
+        position: relative;
+        overflow: hidden;
+
+        &>div {
+            max-width: 16rem;
+        }
+    }
+
+}
