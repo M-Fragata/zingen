@@ -1,0 +1,10 @@
+#about{
+    background-color: var(--surface-color);
+
+    margin-top: -.5rem;
+
+    & .even-columns {
+        gap: 2rem;
+    }
+
+}
