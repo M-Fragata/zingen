@@ -1,0 +1,195 @@
+#pricing {
+    padding-block: 3rem;
+    margin-inline: auto;
+
+    & header {
+        text-align: center;
+        width: 20.44rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        margin-bottom: 2rem;
+
+        p {
+            color: var(--brand-primary-color);
+            font-size: .875rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    & .cards-pricing {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    & .card-pricing {
+
+        padding: 1.5rem;
+
+        border-radius: 1rem;
+
+        border: 1px solid var(--stroke-color);
+
+        background-color: var(--surface-color);
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        p,
+        h2>small {
+            font-size: 1rem;
+            color: var(--text-secundary-color);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-block: 1.5rem;
+        }
+
+        & a {
+            padding: 12px 2rem;
+            width: 100%;
+        }
+
+        & ul+small {
+            display: block;
+            margin-top: 1.5rem;
+            font-size: .875rem;
+            color: var(--text-secundary-color);
+        }
+
+    }
+
+    & .separator {
+        height: 1px;
+        margin-block: 2rem;
+        background: radial-gradient(var(--text-secundary-color), var(--surface-color) 70%);
+    }
+
+    & .card-benefits {
+
+        & li {
+            color: var(--text-secundary-color);
+            background: url(../assets/icons/Check.svg) no-repeat;
+            padding-left: 2rem;
+        }
+
+        & img {
+            margin-right: .5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    & .card-special {
+        position: relative;
+
+        background-color: transparent;
+        border: none;
+        z-index: 0;
+
+        padding: 2rem;
+
+        & h3 {
+            padding-top: 3rem;
+        }
+
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 1.5rem;
+
+            border: 2px solid transparent;
+
+            background:
+                /* O primeiro gradiente é a cor interna do card (surface) */
+                linear-gradient(var(--surface-color), var(--surface-color)) padding-box,
+                /* O segundo é o seu degradê da borda */
+                linear-gradient(90deg, var(--brand-secundary-color) 0%, var(--brand-primary-color) 100%) border-box;
+
+            z-index: -1;
+        }
+
+        &>span {
+            background: linear-gradient(90deg, var(--brand-secundary-color) 0%, var(--brand-primary-color) 100%);
+
+            color: var(--bg-color);
+            padding: .75rem 2rem;
+            border-radius: 1rem 0;
+
+            font: 600 var(--fs-sm) var(--ff-sans);
+            letter-spacing: 0.08em;
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+        }
+
+    }
+
+    @media (width >= 80em) {
+
+        .cards-pricing {
+            flex-direction: row;
+            width: 100%;
+            
+        }
+
+        .card-pricing {
+            padding: 2rem;
+            margin-block: auto;
+            height: 30rem;
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+        }
+
+        .card-special{
+            height: 35rem;
+            padding-bottom: 6rem;
+        }
+
+        .card-pricing:nth-child(1) h2{
+            margin-top: 3.6rem;
+        }
+        .card-pricing:nth-child(3) h2{
+            margin-top: 2rem;
+        }
+
+        header {
+            width: 50rem;
+            margin: auto;
+            gap: .5rem;
+
+            margin-bottom: 2rem;
+
+            p {
+                color: var(--brand-primary-color);
+                font-size: .875rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+            }
+        }
+
+    }
+
+}
+
+.benefits {
+    display: flex;
+    align-items: center;
+}
