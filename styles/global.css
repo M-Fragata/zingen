@@ -18,8 +18,8 @@
     --bg-color: #09090b;
     --surface-color: #18181b;
     --stroke-color: #27272a;
-    --text-primary-color: #a1a1aa;
-    --text-secundary-color: #f4f4f5;
+    --text-primary-color: #f4f4f5;
+    --text-secundary-color: #a1a1aa;
 
 
     --brand-primary-color: #f7b733;
@@ -60,7 +60,7 @@ h1,
 h2,
 h3 {
     line-height: 1.2;
-    color: var(--text-secundary-color);
+    color: var(--text-primary-color);
     font-weight: var(--fw-bold);
     letter-spacing: -0.04em;
 }
@@ -80,6 +80,13 @@ h3 {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+a:hover{
+    background: linear-gradient(90deg, var(--brand-secundary-color) 0%, var(--brand-primary-color) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 ul[role="list"] {
