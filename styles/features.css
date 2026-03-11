@@ -23,7 +23,7 @@
     margin-block: 3rem;
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.02);
 }
 
@@ -82,7 +82,9 @@
             max-width: 16rem;
         }
 
-
+        &>img {
+            animation: up 3s ease-in-out;
+        }
 
     }
 
@@ -109,6 +111,10 @@
 
         ;
 
+        &>img {
+            animation: down 3s ease-in-out;
+        }
+
     }
 
     .card-5 {
@@ -120,6 +126,30 @@
         &>div {
             max-width: 16rem;
         }
+
+        &>img {
+            animation: down 3s ease-in-out;
+        }
     }
 
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(550px);
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(-400px);
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
 }
